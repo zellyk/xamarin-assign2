@@ -4,7 +4,7 @@
              x:Class="Assign2.MainPage">
 
     <StackLayout>
-        <Button Text="Vet Registration" />
+        <Button Text="Vet Registration" Clicked="VetRegister" />
         <Button Text="Vet List" />
         <Button Text="Pet Registration" />
         <Button Text="Pet Display" />

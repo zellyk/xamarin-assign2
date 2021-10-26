@@ -14,5 +14,7 @@ namespace Assign2
         {
             InitializeComponent();
         }
+
+        private async void VetRegister(object sender, EventArgs e) => await Navigation.PushAsync(new VetRegister());
     }
 }

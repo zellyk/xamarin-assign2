@@ -1,40 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Assign2.RegisterPage">
+             x:Class="Assign2.VetRegister">
     <ContentPage.Content>
-        
-        <!--TODO: Add Champlain logo-->
         <StackLayout Padding="20"
             VerticalOptions="Center">
-            <Label Text="Welcome to Register Page!"
+            <Label Text="Welcome to Vet Register Page!"
             FontSize="Large"
             VerticalOptions="Center"
             HorizontalOptions="Center" />
-            <Entry x:Name="a"
-            Placeholder="Username"
+            
+            <Entry Text="{Binding Vet.FirstName}"
+            Placeholder="First Name"
             FontSize="Large"
             />
-            <Entry x:Name="b"
-            Placeholder="Password"
+
+            <Entry Text="{Binding Vet.LastName}"
+            Placeholder="Last Name"
             FontSize="Large"
-            IsPassword="True"
             />
-            <Entry x:Name="c"
+
+            <Entry Text="{Binding Vet.Email}"
+            Placeholder="Email"
+            FontSize="Large"
+            />
+
+            <Entry Text="{Binding Vet.PhoneNumber}"
             Placeholder="Phone"
             FontSize="Large"
             />
-            <Entry x:Name="d"
-            Placeholder="E-mail"
+
+
+            <Entry Text="{Binding Vet.Specialization}"
+            Placeholder="Specialization"
             FontSize="Large"
-            IsPassword="True"
             />
-            <Button x:Name="btnRegister"
-            Text="Register"
+
+            <Button Text="Register"
             Font="large"
             BackgroundColor="LightBlue"
-            Clicked="btnRegister_ClickedAsync"
-            />
+            Clicked="Register"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
