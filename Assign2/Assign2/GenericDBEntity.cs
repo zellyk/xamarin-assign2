@@ -15,15 +15,8 @@ namespace Assign2
             _database.CreateTableAsync<T>().Wait();
         }
 
-        public Task<List<T>> GetAsync()
-        {
-            return
-            _database.Table<T>().ToListAsync();
-        }
+        public Task<List<T>> GetAsync() => _database.Table<T>().ToListAsync();
 
-        public Task<int> SaveAsync(T t)
-        {
-            return _database.InsertAsync(t);
-        }
+        public Task<int> SaveAsync(T t) => _database.InsertAsync(t);
     }
 }

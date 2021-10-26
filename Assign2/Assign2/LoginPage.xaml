@@ -24,6 +24,11 @@
             BackgroundColor="LightBlue"
             Clicked="btnLogin_ClickedAsync"
             />
+
+        <Button Text="Register"
+            Font="large"
+            BackgroundColor="LightBlue"
+            Clicked="btnRegister_ClickedAsync"/>
     </StackLayout>
 
 </ContentPage>

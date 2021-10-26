@@ -18,6 +18,15 @@
             FontSize="Large"
             IsPassword="True"
             />
+            <Entry x:Name="c"
+            Placeholder="Phone"
+            FontSize="Large"
+            />
+            <Entry x:Name="d"
+            Placeholder="E-mail"
+            FontSize="Large"
+            IsPassword="True"
+            />
             <Button x:Name="btnRegister"
             Text="Register"
             Font="large"

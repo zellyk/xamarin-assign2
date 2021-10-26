@@ -17,6 +17,8 @@ namespace Assign2
             InitializeComponent();
         }
 
+        private async void btnRegister_ClickedAsync(object sender, EventArgs args) => await Navigation.PushAsync(new RegisterPage());
+
         private async void btnLogin_ClickedAsync(object sender, EventArgs args)
         {
             string userName = txtUserName.Text;
@@ -27,7 +29,7 @@ namespace Assign2
             if (user != null && user.Password.Equals(passWord))
             {
                 await DisplayAlert("Login result", "Success", "OK");
-                await Navigation.PushAsync(new HomePage());
+                await Navigation.PushAsync(new MainPage());
             }
             else
             {

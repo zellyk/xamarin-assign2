@@ -21,11 +21,23 @@ namespace Assign2
         {
             string userName = a.Text;
             string passWord = b.Text;
+            string phone = c.Text;
+            string email = d.Text;
+
+            var user = new User { Username = userName, Password = passWord, Email = email, Phone = phone };
             if (!(string.IsNullOrEmpty(userName) && string.IsNullOrEmpty(passWord)))
             {
-                await App.Users.Value.SaveAsync(new User { Username = userName, Password = passWord });
-                await DisplayAlert("Register result", "Success", "OK");
-                await Navigation.PushAsync(new LoginPage());
+                if(!user.IsValid(out var message))
+                {
+                    await DisplayAlert("Register result", message, "OK");
+                }
+                else
+                {
+                    await App.Users.Value.SaveAsync(user);
+                    //await DisplayAlert("Register result", "Success", "OK");
+                    await Navigation.PopAsync();
+                    //await Navigation.PushAsync(new LoginPage());
+                }
             }
             else
             {
