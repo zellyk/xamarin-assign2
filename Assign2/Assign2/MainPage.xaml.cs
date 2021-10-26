@@ -16,5 +16,7 @@ namespace Assign2
         }
 
         private async void VetRegister(object sender, EventArgs e) => await Navigation.PushAsync(new VetRegister());
+
+        async void VetList(System.Object sender, System.EventArgs e) => await Navigation.PushAsync(new VetList());
     }
 }

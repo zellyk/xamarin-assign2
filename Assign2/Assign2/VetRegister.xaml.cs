@@ -30,12 +30,14 @@ namespace Assign2
 
         public VetRegister()
         {
+            _vet = new Vet();
             InitializeComponent();
             BindingContext = this;
         }
 
         public async void Register(object sender, EventArgs args)
         {
+            Console.WriteLine(_vet.FirstName);
             await App.Vets.Value.SaveAsync(_vet);
             await Navigation.PopAsync();
         }

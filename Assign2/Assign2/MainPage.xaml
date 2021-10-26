@@ -5,7 +5,7 @@
 
     <StackLayout>
         <Button Text="Vet Registration" Clicked="VetRegister" />
-        <Button Text="Vet List" />
+        <Button Text="Vet List" Clicked="VetList"/>
         <Button Text="Pet Registration" />
         <Button Text="Pet Display" />
         <Button Text="Logout" />
