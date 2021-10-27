@@ -1,6 +1,7 @@
 ﻿using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,5 +19,12 @@ namespace Assign2
         public Task<List<T>> GetAsync() => _database.Table<T>().ToListAsync();
 
         public Task<int> SaveAsync(T t) => _database.InsertAsync(t);
+
+        public Task<T> GetOneByPredicate(Expression<Func<T, bool>> predicate)
+        {
+            return _database.Table<T>()
+                .Where(predicate)
+                .FirstOrDefaultAsync();
+        }
     }
 }

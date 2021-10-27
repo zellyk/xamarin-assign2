@@ -41,9 +41,7 @@ namespace Assign2
             string userName = _user.Username;
             string passWord = _user.Password;
 
-            var userAsync = await App.Users.Value.GetAsync();
-            var user = userAsync.Where(n => n.Username == userName).FirstOrDefault();
-
+            var user = await App.Users.Value.GetOneByPredicate(n => n.Username == userName);
             if (user != null && user.Password.Equals(passWord))
             {
                 await DisplayAlert("Login result", "Success", "OK");
