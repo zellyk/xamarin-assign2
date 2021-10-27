@@ -9,11 +9,12 @@
             FontSize="Large"
             VerticalOptions="Center"
             HorizontalOptions="Center" />
-        <Entry x:Name="txtUserName"
+
+        <Entry Text="{Binding Path=User.Username}"
             Placeholder="Username"
             FontSize="Large"
             />
-        <Entry x:Name="txtPassword"
+        <Entry Text="{Binding Path=User.Password}"
             Placeholder="Password"
             FontSize="Large"
             IsPassword="True"

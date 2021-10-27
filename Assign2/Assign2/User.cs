@@ -23,5 +23,14 @@ namespace Assign2
 
             return false;
         }
+
+        public void Deconstruct(out int id, out string username, out string email, out string password, out string phone)
+        {
+            id = ID;
+            username = Username;
+            email = Email;
+            password = Password;
+            phone = Phone;
+        }
     }
 }

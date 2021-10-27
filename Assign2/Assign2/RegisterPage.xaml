@@ -11,30 +11,36 @@
             FontSize="Large"
             VerticalOptions="Center"
             HorizontalOptions="Center" />
-            <Entry x:Name="a"
+            
+            <Entry Text="{ Binding Path=User.Username }"
             Placeholder="Username"
             FontSize="Large"
             />
-            <Entry x:Name="b"
+            
+            <Entry Text="{ Binding Path=User.Password }"
             Placeholder="Password"
             FontSize="Large"
             IsPassword="True"
             />
-            <Entry x:Name="c"
+            
+            <Entry Text="{ Binding Path=User.Phone }"
             Placeholder="Phone"
             FontSize="Large"
             />
-            <Entry x:Name="d"
+            
+            <Entry Text="{ Binding Path=User.Email }"
             Placeholder="E-mail"
             FontSize="Large"
             IsPassword="True"
             />
+
             <Button x:Name="btnRegister"
             Text="Register"
             Font="large"
             BackgroundColor="LightBlue"
             Clicked="btnRegister_ClickedAsync"
             />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
