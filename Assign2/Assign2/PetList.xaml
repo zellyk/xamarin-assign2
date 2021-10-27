@@ -2,9 +2,9 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="Assign2.VetList">
+    x:Class="Assign2.PetList">
     <ContentPage.Content>
-        <CollectionView x:Name="Vets">
+        <CollectionView x:Name="Pets">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10">
@@ -26,17 +26,7 @@
 
                         <Label Grid.Row="1"
                                Grid.ColumnSpan="2"
-                               Text="{Binding Email}"
-                               FontAttributes="None" />
-
-                        <Label Grid.Row="2"
-                               Grid.ColumnSpan="2"
-                               Text="{Binding PhoneNumber}"
-                               FontAttributes="None" />
-
-                        <Label Grid.Row="3"
-                               Grid.ColumnSpan="1"
-                               Text="{Binding Specialization}"
+                               Text="{Binding Type}"
                                FontAttributes="None" />
                     </Grid>
                 </DataTemplate>

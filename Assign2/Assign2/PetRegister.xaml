@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Assign2.PetRegister">
+    <ContentPage.Content>
+        <StackLayout Padding="20"
+            VerticalOptions="Center">
+            <Label Text="Please Register your pets"
+            FontSize="Large"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+            
+            <Entry Text="{Binding Pet.Name}"
+            Placeholder="Pet Name"
+            FontSize="Large"
+            />
+
+            <Entry Text="{Binding Pet.Type}"
+            Placeholder="Type"
+            FontSize="Large"
+            />
+
+            <Button Text="Register"
+            Font="large"
+            BackgroundColor="LightBlue"
+            Clicked="Register"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

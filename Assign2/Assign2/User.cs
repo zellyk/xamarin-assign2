@@ -13,6 +13,7 @@ namespace Assign2
         public string Email { get; set; }
         public string Password { get; set; }
         public string Phone { get; set; }
+        
 
         public bool IsValid(out string message)
         {

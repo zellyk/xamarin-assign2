@@ -11,35 +11,33 @@ using Xamarin.Forms.Xaml;
 namespace Assign2
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class VetRegister : ContentPage, INotifyPropertyChanged
+    public partial class PetRegister : ContentPage, INotifyPropertyChanged
     {
-
         public new event PropertyChangedEventHandler PropertyChanged;
 
-        private Vet _vet;
+        private Pet _pet;
 
-        public Vet Vet
-        {
-            get => _vet;
+        public Pet Pet {
+            get => _pet;
             set
             {
-                _vet = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Vet)));
+                _pet = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Pet)));
             }
         }
 
-        public VetRegister()
+        public PetRegister()
         {
-            _vet = new Vet();
+            _pet = new Pet();
             InitializeComponent();
             BindingContext = this;
         }
 
-        public async void Register(object sender, EventArgs args)
-        {
-           
-            await App.Vets.Value.SaveAsync(_vet);
+        public async void Register(object sender, EventArgs args) {
+            
+            await App.Pets.Value.SaveAsync(_pet);
             await Navigation.PopAsync();
         }
     }
 }
+

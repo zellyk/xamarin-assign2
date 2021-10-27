@@ -21,6 +21,10 @@ namespace Assign2
 
         private async void Logout(object sender, EventArgs e) => await Navigation.PopToRootAsync();
 
+        private async void PetRegister(System.Object sender, System.EventArgs e) => await Navigation.PushAsync(new PetRegister());
+
+        private async void Button_Clicked(System.Object sender, System.EventArgs e) => await Navigation.PushAsync(new PetList());
+        
 
     }
 }
