@@ -4,7 +4,7 @@
              x:Class="Assign2.RegisterPage">
     <ContentPage.Content>
         
-        <!--TODO: Add Champlain logo-->
+        
         <StackLayout Padding="20"
             VerticalOptions="Center">
             <Label Text="Welcome to Register Page!"
