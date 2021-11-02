@@ -23,8 +23,9 @@ namespace Assign2
 
         private async void PetRegister(System.Object sender, System.EventArgs e) => await Navigation.PushAsync(new PetRegister());
 
-        private async void Button_Clicked(System.Object sender, System.EventArgs e) => await Navigation.PushAsync(new PetList());
-        
+        private async void PetDisplay(System.Object sender, System.EventArgs e) => await Navigation.PushAsync(new PetList());
+
+        private async void OwnersView(System.Object sender, System.EventArgs e) => await Navigation.PushAsync(new OwnersView());
 
     }
 }

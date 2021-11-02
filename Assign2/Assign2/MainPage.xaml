@@ -4,10 +4,11 @@
              x:Class="Assign2.MainPage">
 
     <StackLayout>
+        <Button Text="Owner View" Clicked="OwnersView"/>
         <Button Text="Vet Registration" Clicked="VetRegister" />
         <Button Text="Vet List" Clicked="VetList"/>
         <Button Text="Pet Registration" Clicked="PetRegister"/>
-        <Button Text="Pet Display" Clicked="Button_Clicked"/>
+        <Button Text="Pet Display" Clicked="PetDisplay"/>
         <Button Text="Logout" Clicked="Logout" />
     </StackLayout>
 
