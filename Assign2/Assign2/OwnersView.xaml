@@ -34,10 +34,7 @@
                                Text="{Binding PhoneNumber}"
                                FontAttributes="None" />
 
-                        <Label Grid.Row="3"
-                               Grid.ColumnSpan="1"
-                               Text="{Binding Specialization}"
-                               FontAttributes="None" />
+                       
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

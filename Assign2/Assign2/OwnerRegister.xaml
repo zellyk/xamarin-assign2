@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Assign2.OwnerRegister">
+    <ContentPage.Content>
+        <StackLayout Padding="20"
+            VerticalOptions="Center">
+            <Label Text="Welcome to Owner Register Page!"
+            FontSize="Large"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+            
+            <Entry Text="{Binding Owner.FirstName}"
+            Placeholder="First Name"
+            FontSize="Large"
+            />
+
+            <Entry Text="{Binding Owner.LastName}"
+            Placeholder="Last Name"
+            FontSize="Large"
+            />
+
+            <Entry Text="{Binding Owner.Email}"
+            Placeholder="Email"
+            FontSize="Large"
+            />
+
+            <Entry Text="{Binding Owner.PhoneNumber}"
+            Placeholder="Phone"
+            FontSize="Large"
+            />
+
+            <Button Text="Register"
+            Font="large"
+            BackgroundColor="LightBlue"
+            Clicked="Register"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

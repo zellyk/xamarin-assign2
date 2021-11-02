@@ -27,5 +27,6 @@ namespace Assign2
 
         private async void OwnersView(System.Object sender, System.EventArgs e) => await Navigation.PushAsync(new OwnersView());
 
+        private async void OwnerRegister(System.Object sender, System.EventArgs e) => await Navigation.PushAsync(new OwnerRegister());
     }
 }
